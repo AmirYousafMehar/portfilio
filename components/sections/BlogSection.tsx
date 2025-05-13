@@ -85,12 +85,12 @@ export default function BlogSection() {
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Link href="/blog" className="btn btn-outline">
             View All Articles
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

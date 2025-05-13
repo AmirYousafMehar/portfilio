@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
-
+import profileFakeImage from './assets/images/man.png';
 export default function HeroSection() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -105,7 +105,7 @@ export default function HeroSection() {
             
             <div className="flex items-center gap-6 pt-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/AmirYousafMehar" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
@@ -114,7 +114,7 @@ export default function HeroSection() {
                 <Github className="w-6 h-6" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/amir-yousaf-29327a1a1/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
@@ -123,7 +123,7 @@ export default function HeroSection() {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a 
-                href="mailto:hello@example.com"
+                href="mailto:amiryousafmaher@gmail.com"
                 className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 aria-label="Email"
               >
@@ -141,7 +141,7 @@ export default function HeroSection() {
             <div className="relative w-full aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-500 to-secondary-500 animate-pulse blur-3xl opacity-30" />
               <img 
-                src="https://images.pexels.com/photos/3771807/pexels-photo-3771807.jpeg" 
+                src={(profileFakeImage as any).src}
                 alt="Developer" 
                 className="rounded-3xl h-full w-full object-cover shadow-2xl"
               />
@@ -169,6 +169,14 @@ export default function HeroSection() {
                 transition={{ repeat: Infinity, duration: 3.5 }}
               >
                 <span className="font-semibold">TypeScript</span>
+              </motion.div>
+
+               <motion.div 
+                className="absolute left-60 -top-3 bg-white dark:bg-dark-600 shadow-xl rounded-lg px-3 py-2"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ repeat: Infinity, duration: 3.5 }}
+              >
+                <span className="font-semibold">Next js</span>
               </motion.div>
             </div>
           </motion.div>
