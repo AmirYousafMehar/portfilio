@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-white text-dark-700 dark:bg-dark-800 dark:text-white transition-colors duration-300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold leading-tight;
+  }
+  
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+  
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl sm:text-2xl;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-600 hover:bg-secondary-700 text-white focus:ring-secondary-500;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-50 dark:hover:bg-dark-700 focus:ring-primary-500;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-center;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-dark-600 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .nav-link {
+    @apply text-dark-500 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 text-sm font-medium transition-colors duration-300;
+  }
+  
+  .nav-link-active {
+    @apply text-primary-600 dark:text-primary-400;
+  }
+}
+
+/* Custom cursor effects */
+.custom-cursor {
+  @apply fixed pointer-events-none z-50 rounded-full mix-blend-difference;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+.custom-cursor.active {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+}
+
+/* Smooth scrolling for project section transitions */
+.projects-grid {
+  @apply grid gap-8 transition-all duration-500;
+}
+
+/* Glass morphism effects */
+.glass {
+  @apply bg-white bg-opacity-20 dark:bg-dark-700 dark:bg-opacity-20 backdrop-blur-lg border border-white border-opacity-20 dark:border-dark-500;
+}
+
+/* Custom animated underline for links */
+.animated-underline {
+  @apply relative;
+}
+
+.animated-underline::after {
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 content-[''];
+}
+
+.animated-underline:hover::after {
+  @apply w-full;
+}
