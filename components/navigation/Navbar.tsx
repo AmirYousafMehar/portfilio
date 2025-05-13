@@ -14,7 +14,6 @@ const navLinks = [
   { name: 'Blog', href: '/#blog' },
   { name: 'Contact', href: '/#contact' },
 ];
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);

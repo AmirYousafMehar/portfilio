@@ -9,21 +9,21 @@ export default function Footer() {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">Dev<span className="font-light">Portfolio</span></h3>
+            <h3 className="text-xl font-bold mb-4">Amir<span className="font-light">Yousaf</span></h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-md">
               Full stack developer specializing in creating beautiful, functional, and user-friendly applications with modern technologies.
             </p>
             <div className="flex space-x-4">
-              <a href="#" aria-label="GitHub" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+              <a href="https://github.com/AmirYousafMehar" aria-label="GitHub" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+              <a href="https://www.linkedin.com/in/amir-yousaf-29327a1a1/" aria-label="LinkedIn" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Twitter" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+              {/* <a href="#" aria-label="Twitter" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a href="mailto:hello@devportfolio.com" aria-label="Email" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+              </a> */}
+              <a href="mailto:amiryousafmaher@gmail.com" aria-label="Email" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -53,7 +53,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div>
+          {/* <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
@@ -66,12 +66,12 @@ export default function Footer() {
                 <Link href="/cookies" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Cookie Policy</Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
         
         <div className="border-t border-gray-200 dark:border-gray-600 mt-12 pt-8 text-center">
           <p className="text-gray-600 dark:text-gray-300">
-            &copy; {currentYear} DevPortfolio. All rights reserved.
+            &copy; {currentYear} AmirYousaf. All rights reserved.
           </p>
         </div>
       </div>

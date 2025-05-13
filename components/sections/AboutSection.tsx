@@ -4,37 +4,45 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import { Download, CheckCircle, Calendar, Briefcase, GraduationCap } from 'lucide-react';
-
+import profileFakeImage from './assets/images/man.png';
 const timeline = [
+    {
+    id: 12,
+    date: '2024 - Present',
+    title: 'Senior Full Stack Developer',
+    company: 'Allomate Solution.',
+    description: 'Leading development of scalable web applications using React, Node.js, and AWS.',
+    icon: <Briefcase className="w-5 h-5" />,
+  },
   {
     id: 1,
-    date: '2023 - Present',
+    date: '2022 - 2024',
     title: 'Senior Full Stack Developer',
-    company: 'Tech Innovations Inc.',
+    company: 'Odyssey Analytics.',
     description: 'Leading development of scalable web applications using React, Node.js, and AWS.',
     icon: <Briefcase className="w-5 h-5" />,
   },
   {
     id: 2,
-    date: '2020 - 2023',
+    date: '2020 - 2022',
     title: 'Full Stack Developer',
-    company: 'Digital Solutions Ltd.',
+    company: 'Vista Consultancy Ltd.',
     description: 'Developed responsive web applications and RESTful APIs using modern JavaScript frameworks.',
     icon: <Briefcase className="w-5 h-5" />,
   },
   {
     id: 3,
-    date: '2018 - 2020',
+    date: '2019 - 2020',
     title: 'Frontend Developer',
-    company: 'Creative Web Agency',
+    company: 'Agile Data Technology',
     description: 'Built responsive user interfaces and implemented complex UI features for client websites.',
     icon: <Briefcase className="w-5 h-5" />,
   },
   {
     id: 4,
-    date: '2014 - 2018',
+    date: '2015 - 2019',
     title: 'Bachelor of Computer Science',
-    company: 'University of Technology',
+    company: 'University of Gujrat (UOG), Punjab Pakistan',
     description: 'Graduated with honors, specializing in software engineering and web technologies.',
     icon: <GraduationCap className="w-5 h-5" />,
   },
@@ -72,7 +80,7 @@ export default function AboutSection() {
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
               <Image
-                src="https://images.pexels.com/photos/5989922/pexels-photo-5989922.jpeg"
+                src={(profileFakeImage as any).src}
                 alt="About Me"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -94,7 +102,7 @@ export default function AboutSection() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-2xl font-bold mb-4">I'm John Doe, a Full Stack Developer based in San Francisco</h3>
+            <h3 className="text-2xl font-bold mb-4">I'm Amir Yousaf, a Full Stack Developer based in Lahore Pakistan</h3>
             
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               I'm passionate about creating elegant solutions to complex problems, with a focus on user-centric design and scalable architecture. With over 5 years of professional experience, I've worked on everything from small business websites to complex enterprise applications.
@@ -118,7 +126,7 @@ export default function AboutSection() {
               ))}
             </div>
             
-            <a href="/resume.pdf" download className="btn btn-primary">
+            <a href="#" download className="btn btn-primary">
               <Download className="w-5 h-5 mr-2" />
               Download Resume
             </a>

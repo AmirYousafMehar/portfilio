@@ -61,7 +61,7 @@ export default function ProjectsSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {categories.map((category) => (
+          {/* {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
             >
               {category}
             </button>
-          ))}
+          ))} */}
         </motion.div>
 
         <motion.div
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
                   style={{ objectFit: 'cover' }}
                   className="transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex space-x-3">
                     {project.githubUrl && (
                       <a
@@ -121,14 +121,14 @@ export default function ProjectsSection() {
                       </a>
                     )}
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="p-6">
-                <Link href={`/projects/${project.slug}`} className="block">
+                {/* <Link href={`/projects/${project.slug}`} className="block"> */}
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary-600 transition-colors">
                     {project.title}
                   </h3>
-                </Link>
+                {/* </Link> */}
                 <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
                   {project.description}
                 </p>
@@ -153,7 +153,7 @@ export default function ProjectsSection() {
         </motion.div>
         
         <div className="text-center mt-12">
-          <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+          <Link href="https://github.com/AmirYousafMehar" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
             <Github className="w-5 h-5 mr-2" />
             View More on GitHub
           </Link>
